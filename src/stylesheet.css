@@ -1,0 +1,112 @@
+header{
+    background-color: grey;
+    padding: 20px 20px;
+
+}
+body{
+
+    background: light grey;
+    font-family: "Verdana", Verdana, serif;
+        text-align: centeR;
+
+    }
+
+h1 {
+    font-family: 'Bad Script';
+    font-size: 22px;
+
+    color: white;
+     }
+h3 {
+    font-family: "Bad Script";
+    font-size: 20px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 700;
+    line-height: 15.4px;
+    color: white;
+    }
+p {
+    font-family: 'Comfortaa';
+    font-size: 18px;
+
+
+ }
+
+ .column {
+     float: left;
+     width: 20%;
+ }
+
+ /* Clear floats after the columns */
+ .row:after {
+     content: "";
+     display: table;
+     clear: both;
+ }
+ .divcolumn {
+
+      float: left;
+      width: 50%;
+      height: 500px;
+      background: grey;
+  }
+
+  /* Clear floats after the columns */
+  .divider:after {
+      content: "";
+      display: table;
+      clear: both;
+  }
+
+
+.br{
+height: 100px;
+}
+
+.br2{
+height:50px;
+}
+
+.map{
+    width:50%;
+
+    }
+nav {
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: grey;
+    text-align: center;
+
+}
+
+li {
+    float: left;
+    display: inline;
+}
+
+li a {
+    display: block;
+    color:  white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #111;
+    color: white;
+    font-size: 20px;
+}
+
+a{
+color: black;
+}
