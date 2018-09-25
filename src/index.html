@@ -27,18 +27,17 @@
 </br></br></br></br>
 
     <div id="product">
-        <form method="post" enctype="multipart/form-data">
+        <form method="post" enctype="multipart/form-data" target="_self">
             <div>
                 <label for="file">Choose file to upload</label></br>
                 <input type="file" id="file" name="file" accept=".csv"></br>
+                <button id="submitfile">Submit File</button>
                 </br></br>
 
                 <label for="url"> Enter an URL to upload file </label></br>
-                <input type="URL" id="url" name="url" accept=".csv">
+                <input type="URL" id="url" name="url" accept=".csv"></br>
+                <button id="submiturl">Submit URL</button>
 
-            </div>
-            <div>
-                <button>Submit</button>
             </div>
         </form>
 
@@ -62,6 +61,5 @@
             Taks is due for Sunday night, and we will review the submissions in class on Monday. </p>
         <pre> text </pre>
     </div>
-
 </body>
 </html>
