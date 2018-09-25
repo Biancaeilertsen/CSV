@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="parsing.js"></script>
+    <meta charset="utf-8"/>
     <title>CSV Daytask W3</title>
+    <link rel="script" a href="parsing.js" />
     <link rel="stylesheet" a href="stylesheet.css" />
     <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Bad Script'>
     <link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'>
@@ -27,11 +30,11 @@
         <form method="post" enctype="multipart/form-data">
             <div>
                 <label for="file">Choose file to upload</label></br>
-                <input type="file" id="file" name="file" multiple></br>
+                <input type="file" id="file" name="file" accept=".csv"></br>
                 </br></br>
 
                 <label for="url"> Enter an URL to upload file </label></br>
-                <input type="URL" id="url" name="url" multiple>
+                <input type="URL" id="url" name="url" accept=".csv">
 
             </div>
             <div>
@@ -59,7 +62,6 @@
             Taks is due for Sunday night, and we will review the submissions in class on Monday. </p>
         <pre> text </pre>
     </div>
-
 
 </body>
 </html>
