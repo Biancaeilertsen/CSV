@@ -1,3 +1,5 @@
+
+
 document.getElementById("file").addEventListener(upload, false);
 
 function upload(e) {
@@ -16,4 +18,28 @@ function upload(e) {
             document.getElementById(d[0]).value = d[1];
         });
     }
+}
+
+
+
+
+document.getElementById("submiturl").addEventListener("click", parseURL);
+
+function parseURL() {
+
+    var link = document.getElementById("url").innerHTML;
+    d3.ajax({
+        url: link,
+        success: function (data) {
+            var arr = d3.csvtoArray(data);
+            oncomplete(arr);
+        },
+        dataType: "text",
+        });
+
+        oncomplete: function (arr) {
+            for (i=0; i<items.length; i++) {
+            document.writeln(arr[i]);
+            }
+        }
 }
