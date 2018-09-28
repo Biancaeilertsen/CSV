@@ -1,11 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <script src="https://d3js.org/d3.v5.min.js"></script>
-    <script src="parsing.js"></script>
-    <meta charset="utf-8"/>
+    <meta charset="UTF-8"/>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
     <title>CSV Daytask W3</title>
-    <link rel="script" a href="parsing.js" />
     <link rel="stylesheet" a href="stylesheet.css" />
     <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Bad Script'>
     <link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'>
@@ -22,25 +20,62 @@
             <li><a href="#"></a>insert</li>
         </ul>
     </nav>-->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
+    <script type="text/javascript">  
+    $(document).ready(function() {
+
+    // The event listener for the file upload
+    document.getElementById('txtFileUpload').addEventListener('change', upload, false);
+
+    // Method that checks that the browser supports the HTML5 File API
+    function browserSupportFileUpload() {
+        var isCompatible = false;
+        if (window.File && window.FileReader && window.FileList && window.Blob) {
+        isCompatible = true;
+        }
+        return isCompatible;
+    }
+
+    // Method that reads and processes the selected file
+    function upload(evt) {
+    if (!browserSupportFileUpload()) {
+        alert('The File APIs are not fully supported in this browser!');
+        } else {
+            var data = null;
+            var file = evt.target.files[0];
+            var reader = new FileReader();
+            reader.readAsText(file);
+            reader.onload = function(event) {
+                var csvData = event.target.result;
+                data = $.csv.toArrays(csvData);
+                if (data && data.length > 0) {
+                  console.log(data);
+                } else {
+                    alert('No data to import!');
+                }
+            };
+            reader.onerror = function() {
+                alert('Unable to read ' + file.fileName);
+            };
+        }
+    }
+}); </script>
 </head>
 <body>
 </br></br></br></br>
-
     <div id="product">
-        <form method="post" enctype="multipart/form-data" target="_self">
             <div>
-                <label for="file">Choose file to upload</label></br>
-                <input type="file" id="file" name="file" accept=".csv"></br>
-                <button id="submitfile">Submit File</button>
-                </br></br>
-
                 <label for="url"> Enter an URL to upload file </label></br>
                 <input type="URL" id="url" name="url" accept=".csv"></br>
-                <button id="submiturl">Submit URL</button>
-
+                <input type="button" name="submiturl">Submit URL</button>
             </div>
-        </form>
-
+   <div id="dvImportSegments" class="fileupload ">
+    <fieldset>
+        <legend>Upload your CSV File</legend>
+            <input type="file" name="File Upload" id="txtFileUpload" accept=".csv" />
+   </fieldset>
+</div>
     </div>
     <div id="task">
 
@@ -50,7 +85,7 @@
 
             I should be able to pick an online file or upload a file of my own.</br>
 
-            I want you application to produce a dynamic document that allows me to chose different values to plot and different visualizations.</br>
+            I want your application to produce a dynamic document that allows me to chose different values to plot and different visualizations.</br>
 
             I suggest using D3, but you may use any javascript libraries you desire.</br>
 
@@ -58,8 +93,16 @@
 
             Submit a document containing the list of your group members and a link to a hosted version of your solution. (ie Heroku)</br>
 
-            Taks is due for Sunday night, and we will review the submissions in class on Monday. </p>
+            Task is due for Sunday night, and we will review the submissions in class on Monday. </p>
         <pre> text </pre>
     </div>
+<!--<script src="parsing.js" type="text/javascript" charset="UTF-8"></script>-->
+<script>
+function parser(){
+    var link = document.getElementById("url").value;
+       d3.csv(link, function(data){
+        console.log(data);
+    });}
+</script>
 </body>
 </html>
