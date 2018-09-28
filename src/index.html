@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head>
 
     <meta charset="UTF-8"/>
@@ -11,13 +11,13 @@
     <link rel="stylesheet" href="bubbleScatter.css" />
     <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Bad Script'>
 
+
     <link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'>
 
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-   <!-- <script src="https://d3js.org/d3.v4.min.js"></script>
-    <script src="https://d3js.org/d3.v5.min.js"></script>-->
+    <!-- <script src="https://d3js.org/d3.v4.min.js"></script>
+     <script src="https://d3js.org/d3.v5.min.js"></script>-->
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
@@ -79,43 +79,56 @@
 <body>
 <header>
     <h1> CSV and Javascript </h1>
-    <h3> Week 3, day 2</h3>
+    <h3> Week 3</h3>
 </header>
 </br></br></br></br>
 
-    <div id="product">
 
-            <div>
-                <label for="url"> Enter an URL to upload file </label></br>
-                <input type="URL" id="url" name="url" accept=".csv"></br>
+<div id="task">
 
-                <button id="submiturl" onclick="parser()">Submit URL</button>
+    <p> Using JavaScript, CSS and HTML5 build a website that allows me to select any CSV file,</br>
 
-            </div>
-   <div id="dvImportSegments" class="fileupload ">
-    <fieldset>
-        <legend>Upload your CSV File</legend>
-            <input type="file" name="File Upload" id="txtFileUpload" accept=".csv" />
-   </fieldset>
+        the csv will always have a header for this example.</br>
+
+        I should be able to pick an online file or upload a file of my own.</br>
+
+        I want your application to produce a dynamic document that allows me to chose different values to plot and different visualizations.</br>
+
+        I suggest using D3, but you may use any javascript libraries you desire.</br>
+
+        This may seem like a large tasks, but there are PLENTY of examples online.</br>
+
+        Submit a document containing the list of your group members and a link to a hosted version of your solution. (ie Heroku)</br>
+
+        Task is due for Sunday night, and we will review the submissions in class on Monday. </p>
 </div>
-    </div>
-    <div id="task">
 
-        <p> Using JavaScript, CSS and HTML5 build a website that allows me to select any CSV file,</br>
 
-            the csv will always have a header for this example.</br>
+<div id="product">
+    <fieldset>
 
-            I should be able to pick an online file or upload a file of my own.</br>
+        <div>
+            <label for="url"> Enter an URL to upload file </label></br>
+            <input type="URL" id="url" name="url" accept=".csv"></br>
 
-            I want your application to produce a dynamic document that allows me to chose different values to plot and different visualizations.</br>
+            <button id="submiturl" onclick="parser()">Submit URL</button>
+        </div>
+        <br>
 
-            I suggest using D3, but you may use any javascript libraries you desire.</br>
+        <p> OR </p>
 
-            This may seem like a large tasks, but there are PLENTY of examples online.</br>
+        <div id="dvImportSegments" class="fileupload ">
 
-            Submit a document containing the list of your group members and a link to a hosted version of your solution. (ie Heroku)</br>
+            <label for="txtFileUpload">Upload your CSV File</label></br>
+            <input type="file" name="File Upload" id="txtFileUpload" accept=".csv" />
+            <br>
+            <p> </p>
+        </div>
+    </fieldset>
+</div>
+<div id="br2"></div>
+<div id="br2"></div>
 
-            Task is due for Sunday night, and we will review the submissions in class on Monday. </p>
-    </div>
+
 </body>
 </html>

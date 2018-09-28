@@ -1,31 +1,42 @@
 header{
-    background-color: grey;
-    padding: 20px 20px;
+    background: url(chart.jpg) no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    min-height: 100vh;
 
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
 }
+
 body{
 
     background: light grey;
     font-family: "Verdana", Verdana, serif;
-        text-align: centeR;
+        text-align: center;
+    margin: 0;
 
     }
 
-h1 {
-    font-family: 'Bad Script';
-    font-size: 22px;
 
-    color: white;
-     }
-h3 {
-    font-family: "Bad Script";
-    font-size: 20px;
-    font-style: normal;
-    font-variant: normal;
-    font-weight: 700;
-    line-height: 15.4px;
-    color: white;
-    }
+h1{
+    color:white;
+    font-size: 300%;
+    text-transform: uppercase;
+    text-shadow: 4px 4px 20px #000;
+    text-align: center;
+    font-family: arial;
+}
+
+h3{
+    color:white;
+    font-size: 200%;
+    text-transform: uppercase;
+    text-shadow: 4px 4px 20px #000;
+    text-align: center;
+    font-family: arial;
+}
+
 p {
     font-family: 'Comfortaa';
     font-size: 18px;
@@ -58,7 +69,6 @@ p {
       display: table;
       clear: both;
   }
-
 
 .br{
 height: 100px;
@@ -100,7 +110,6 @@ li a {
     display: inline-block;
 }
 
-/* Change the link color to #111 (black) on hover */
 li a:hover {
     background-color: #111;
     color: white;
@@ -109,4 +118,12 @@ li a:hover {
 
 a{
 color: black;
+}
+
+div{
+padding-top: 30px;
+}
+
+.task{
+width: 50%;
 }
