@@ -2,27 +2,12 @@
 <html>
 <head>
     <meta charset="UTF-8"/>
-    <script src="https://d3js.org/d3.v4.min.js"></script>
-    <title>CSV Daytask W3</title>
-    <link rel="stylesheet" a href="stylesheet.css" />
-    <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Bad Script'>
-    <link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'>
-    <header>
-        <h1> CSV and Javascript </h1>
-        <h3> Week 3, day 2</h3>
-    </header>
-    <!--<nav>
-        <ul>
-            <li><a href="#"></a>insert</li>
-            <li><a href="#"></a>insert</li>
-            <li><a href="#"></a>insert</li>
-            <li><a href="#"></a>insert</li>
-            <li><a href="#"></a>insert</li>
-        </ul>
-    </nav>-->
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+   <!-- <script src="https://d3js.org/d3.v4.min.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
-    <script type="text/javascript">  
+    <script type='text/javascript' src='script.js'></script>
+    <script type="text/javascript">
     $(document).ready(function() {
 
     // The event listener for the file upload
@@ -58,9 +43,31 @@
             reader.onerror = function() {
                 alert('Unable to read ' + file.fileName);
             };
+            }
         }
-    }
-}); </script>
+    });
+    </script>
+    <script>
+function parser(){
+    var link = document.getElementById("url").value;
+       d3.csv(link, function(data){
+        console.log(data);
+    });}
+</script>
+
+
+    <title>CSV Daytask W3</title>
+    <link rel="stylesheet" a href="stylesheet.css" />
+    <link rel='stylesheet' href='style.css'>
+    <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Bad Script'>
+    <link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'>
+
+
+
+    <header>
+        <h1> CSV and Javascript </h1>
+        <h3> Week 3, day 2</h3>
+    </header>
 </head>
 <body>
 </br></br></br></br>
@@ -95,13 +102,11 @@
 
             Task is due for Sunday night, and we will review the submissions in class on Monday. </p>
     </div>
-<!--<script src="parsing.js" type="text/javascript" charset="UTF-8"></script>-->
-<script>
-function parser(){
-    var link = document.getElementById("url").value;
-       d3.csv(link, function(data){
-        console.log(data);
-    });}
+
+<script type="text/javascript" src="secondscript.js">
+  var sm = new ScatterMatrix('data.csv');
+  sm.render();
 </script>
+
 </body>
 </html>
