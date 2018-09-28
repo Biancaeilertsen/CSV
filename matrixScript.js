@@ -1,4 +1,4 @@
-d3.csv('data.csv',function (data) {
+function iniz(data) {
 // CSV section
       var body = d3.select('body')
   var selectData = d3.keys(data[0]);
@@ -160,4 +160,4 @@ d3.csv('data.csv',function (data) {
       .delay(function (d,i) { return i*100})
         .attr('cx',function (d) { return xScale(d[value]) })
   }
-})
+}
