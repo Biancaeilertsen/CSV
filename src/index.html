@@ -2,11 +2,11 @@
 <html>
 <head>
     <meta charset="UTF-8"/>
+    <!-- SCRIPTS -->
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-   <!-- <script src="https://d3js.org/d3.v4.min.js"></script>-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
-    <script type='text/javascript' src='script.js'></script>
+    <script type='text/javascript' src='matrixScript.js'></script>
     <script type="text/javascript">
     $(document).ready(function() {
 
@@ -54,21 +54,24 @@ function parser(){
         console.log(data);
     });}
 </script>
+    <!-- <script src="https://d3js.org/d3.v4.min.js"></script>-->
 
-
-    <title>CSV Daytask W3</title>
-    <link rel="stylesheet" a href="stylesheet.css" />
-    <link rel='stylesheet' href='style.css'>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="websiteStylesheet.css" />
+    <link rel='stylesheet' href='bubbleScatter.css'>
+    <!-- Fonts -->
     <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Bad Script'>
     <link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'>
 
-
-
+    <title>CSV Daytask W3</title>
     <header>
         <h1> CSV and Javascript </h1>
         <h3> Week 3, day 2</h3>
     </header>
 </head>
+
+
+
 <body>
 </br></br></br></br>
     <div id="product">
@@ -102,11 +105,5 @@ function parser(){
 
             Task is due for Sunday night, and we will review the submissions in class on Monday. </p>
     </div>
-
-<script type="text/javascript" src="secondscript.js">
-  var sm = new ScatterMatrix('data.csv');
-  sm.render();
-</script>
-
 </body>
 </html>
