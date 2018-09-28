@@ -1,7 +1,4 @@
 
-
-//document.getElementById("submitfile").addEventListener("click", upload);
-
 function upload(e) {
     var data = null;
     var file = e.target.files[0];
@@ -20,9 +17,6 @@ function upload(e) {
     }
 }
 
-//document.getElementById("submiturl").addEventListener("click", parser());
-
-
 function parser(){
     var link = document.getElementById("url").value;
        d3.csv(link, function(data){
@@ -31,25 +25,26 @@ function parser(){
 }
 
 
+function parseURL() {
+    
+    var data;
+    var link = document.getElementById("url").value;
+    $.ajax({
+      type: "GET",  
+      async: true,
+      url: link,
+      dataType: "text",
+      crossDomain: true,       
+      success: function(response) {
+        data = $.csv.toArrays(response);
+        console.log(data);
+      }   
+    }); 
+}   
 
 
-//document.getElementById("submiturl").addEventListener("click", parser);
 
-/*function parseURL() {
 
-    var link = document.getElementById("url").innerHTML;
-    d3.ajax({
-        url: link,
-        success: function (data) {
-            var arr = d3.csvtoArray(data);
-            oncomplete(arr);
-        },
-        dataType: "text",
-        });
 
-        oncomplete: function (arr) {
-            for (i=0; i<items.length; i++) {
-            document.writeln(arr[i]);
-            }
-        }
-}*/
+
+

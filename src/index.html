@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+
     <meta charset="UTF-8"/>
     <!-- SCRIPTS -->
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
@@ -8,7 +9,36 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
     <script type='text/javascript' src='matrixScript.js'></script>
     <script type="text/javascript">
+
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="parsing.js"></script>
+     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <meta charset="utf-8"/>
+
+    <title>CSV Daytask W3</title>
+    <link rel="stylesheet" a href="stylesheet.css" />
+    <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Bad Script'>
+    <link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'>
+    <header>
+        <h1> CSV and Javascript </h1>
+        <h3> Week 3, day 2</h3>
+    </header>
+    <!--<nav>
+        <ul>
+            <li><a href="#"></a>insert</li>
+            <li><a href="#"></a>insert</li>
+            <li><a href="#"></a>insert</li>
+            <li><a href="#"></a>insert</li>
+            <li><a href="#"></a>insert</li>
+        </ul>
+    </nav>-->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
+    <script type="text/javascript">
+
     $(document).ready(function() {
+
 
     // The event listener for the file upload
     document.getElementById('txtFileUpload').addEventListener('change', upload, false);
@@ -75,10 +105,13 @@ function parser(){
 <body>
 </br></br></br></br>
     <div id="product">
+
             <div>
                 <label for="url"> Enter an URL to upload file </label></br>
                 <input type="URL" id="url" name="url" accept=".csv"></br>
+
                 <button id="submiturl" onclick="parser()">Submit URL</button>
+
             </div>
    <div id="dvImportSegments" class="fileupload ">
     <fieldset>
