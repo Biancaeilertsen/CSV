@@ -2,7 +2,6 @@ d3.csv('data.csv',function (data) {
 // CSV section
       var body = d3.select('body')
   var selectData = d3.keys(data[0]);
-
   // Select X-axis Variable
   var span = body.append('span')
     .text('Select X-Axis variable: ')

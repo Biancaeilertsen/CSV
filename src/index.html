@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-
     <meta charset="UTF-8"/>
     <title>CSV Daytask W3</title>
 
@@ -27,7 +26,6 @@
     <script type="text/javascript">
 
     $(document).ready(function() {
-
 
     // The event listener for the file upload
     document.getElementById('txtFileUpload').addEventListener('change', upload, false);
@@ -69,7 +67,25 @@
     function parser(){
     var link = document.getElementById("url").value;
        d3.csv(link, function(data){
-        console.log(data);
+
+
+
+        var i;
+        for(i = 0; i < data.length; i++) {
+            var obj = data[i];
+            for(var prop in obj) {
+                if(obj.prop instanceof String) {
+                    console.log(obj.prop);
+                    delete obj.prop;
+                }
+
+            }
+
+        }
+
+
+
+
     });}
     </script>
 </head>
@@ -96,26 +112,26 @@
     <fieldset>
         <legend>Upload your CSV File</legend>
             <input type="file" name="File Upload" id="txtFileUpload" accept=".csv" />
-   </fieldset>
+        </fieldset>
+    </div>
 </div>
-    </div>
-    <div id="task">
+<div id="task">
 
-        <p> Using JavaScript, CSS and HTML5 build a website that allows me to select any CSV file,</br>
+    <p> Using JavaScript, CSS and HTML5 build a website that allows me to select any CSV file,</br>
 
-            the csv will always have a header for this example.</br>
+        the csv will always have a header for this example.</br>
 
-            I should be able to pick an online file or upload a file of my own.</br>
+        I should be able to pick an online file or upload a file of my own.</br>
 
-            I want your application to produce a dynamic document that allows me to chose different values to plot and different visualizations.</br>
+        I want your application to produce a dynamic document that allows me to chose different values to plot and different visualizations.</br>
 
-            I suggest using D3, but you may use any javascript libraries you desire.</br>
+        I suggest using D3, but you may use any javascript libraries you desire.</br>
 
-            This may seem like a large tasks, but there are PLENTY of examples online.</br>
+        This may seem like a large tasks, but there are PLENTY of examples online.</br>
 
-            Submit a document containing the list of your group members and a link to a hosted version of your solution. (ie Heroku)</br>
+        Submit a document containing the list of your group members and a link to a hosted version of your solution. (ie Heroku)</br>
 
-            Task is due for Sunday night, and we will review the submissions in class on Monday. </p>
-    </div>
+        Task is due for Sunday night, and we will review the submissions in class on Monday. </p>
+</div>
 </body>
 </html>
